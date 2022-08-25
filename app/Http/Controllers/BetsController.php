@@ -30,7 +30,8 @@ class BetsController extends Controller
             
         ]);
      
-      
+       $wrsl = Wrestlers::find($bet['wrestlers']);
+       
        $bet['user_id'] = auth()->id();
         $bet['wrestler_id'] =$wrsl->id;
 

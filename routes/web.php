@@ -21,6 +21,9 @@ Route::delete('/bet/{bets}', [BetsController::class , 'destroy']);
 Route::post('/authenticate' , [UserController::class , 'authenticate']);
 
 Route::get('/', [WrestlersController::class, 'index']);
+
+
+
 Route::get('bet', [WrestlersController::class, 'bet'])->middleware('auth');
 Route::post('bet' , [BetsController::class , 'store']);
 

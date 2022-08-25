@@ -19,8 +19,7 @@
                     @endforeach
                 </select>
 
-                <label for="wins">expectation</label>   
-                <input type="checkbox" name="wins">Wins
+           
 
                 <input type="submit" class="bg-emerald-300 rounded-md p-5" value="Login">
             </form>

@@ -76,37 +76,7 @@
 
 </section>
 
-<footer class=" bottom-0 left-0  w-full flex-col md:flex-row mt-5 bg-amber-200    p-5">
-    <div class="   sm:flex  sm:w-full  sm:justify-between">
-        <!--first one-->
-        <div class="hidden  sm:flex sm:flex-col ">
-            <p class="text-lg font-normal">do not get it twisted , You will lose</p>
-            <p class="text-md">Phone number</p>
-           <!--  <img src="{{asset('images/pic1.jpg')}}" alt="" class="h-32 w-24"> -->
-        </div>
 
-          
-        
-           <!--Third one-->
-        <div class="flex flex-col ">
-            <p class="text-lg font-normal">Socials</p>
-            <div class="flex space-x-6">
-                  <a href="">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
-            <a href=""><i class="fa-brands fa-pinterest"></i></a>
-            </div>
-          
-        </div>
-        <div class="hidden  sm:flex sm:flex-col ">
-            <p class="text-lg font-normal">Address:westWorld</p>
-            <p class="text-md">Phone number</p>
-        </div>
-
- 
-
-</footer>
 
 @endsection
 

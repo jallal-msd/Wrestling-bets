@@ -7,7 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Wrestlers extends Model
 {
+
     use HasFactory;
+
+    
      protected $attributes=[
             
     ];
