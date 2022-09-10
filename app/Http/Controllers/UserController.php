@@ -12,11 +12,11 @@ class UserController extends Controller
 
     public function store(Request  $request){
 
-       $user =  $request->validate([
-            'name' =>'required',
-            'email' =>'required',
-            'password' =>'required|confirmed',
-        ]);
+      $user =  $request->validate([
+        'name' =>'required',
+        'email' =>'required',
+        'password' =>'required|confirmed',
+    ]);
 
        $user['password'] = bcrypt($user['password']);
 
@@ -25,34 +25,28 @@ class UserController extends Controller
     } 
 
     public function logout(Request $request){
-        auth()->logout();
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
+      auth()->logout();
+      $request->session()->invalidate();
+      $request->session()->regenerateToken();
 
-        return redirect('/');
+      return redirect('/');
     }
 
     public function authenticate(Request $request){
+      $credential = $request->validate([
+        'email' =>['required', 'email'],
+        'password' => 'required'
 
-        $credential = $request->validate([
-            'email' =>['required', 'email'],
-            'password' => 'required'
+      ]);
 
-        ]);
-
-        if(Auth::attempt($credential)){
-
-            $request->session()->regenerate();
-
-            return redirect('/')->with('message' ,"welcome:".$request->name);
+      if(Auth::attempt($credential)){
+        $request->session()->regenerate();
+         return redirect('/')->with('message' ,"welcome:".$request->name);
         }
-
         return back()->withErrors([
-            'email'=>'invalid credentials'
-        ])->onlyInput('email');
+          'email'=>'invalid credentials'
+             ])->onlyInput('email');
 
     }
-
-
    
 }

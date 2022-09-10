@@ -16,27 +16,15 @@ use App\Http\Controllers\BetsController;
 |
 */
 
-Route::delete('/bet/{bets}', [BetsController::class , 'destroy']);
-
+Route::delete('/bet/{bets}', [BetsController::class , 'destroy']); 
 Route::post('/authenticate' , [UserController::class , 'authenticate']);
-
 Route::get('/', [WrestlersController::class, 'index']);
-
-
-
 Route::get('bet', [WrestlersController::class, 'bet'])->middleware('auth');
 Route::post('bet' , [BetsController::class , 'store']);
-
-
-
 Route::get('wrs', [BetsController::class , 'show'])->middleware('auth');
-
 Route::view('login', 'login')->middleware('guest')->name("login");
-
 Route::view('register', 'register')->middleware('guest');
-
 Route::post('logout',[UserController::class, 'logout'])->middleware('auth');
-
 Route::post('/store' , [UserController::class , 'store']);
 
 

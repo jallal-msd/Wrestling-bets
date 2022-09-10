@@ -24,7 +24,7 @@
               <td class=" p-5">{{$wrestler->wins}}-{{$wrestler->lost}}</td>
               <td class=" p-5">{{$wrestler->prize}}</td>
               <td class=" p-5">{{$wrestler->price}}$</td>
-                </tr>
+             </tr>
                 @endforeach
                 </tbody>
             </table>
